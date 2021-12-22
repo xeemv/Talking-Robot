@@ -1,12 +1,18 @@
 const button = document.querySelector("button");
 
-const speechRecognition = window.speechRecognition || window.webkitSpeechRecognition; // to recognize speech
+const SpeechRecognition = 
+    window.SpeechRecognition || window.webkitSpeechRecognition; // to recognize speech
 
-const recognition = new speech
+const recognition = new SpeechRecognition();
 
+recognition.onStart = function() {
+    console.log("Speech Recognition started!");
+};
 
+recognition.onResult = function (event) {
+    console.log(event);
+};
 
-
-button.addEventListener("click", ()=> { // this for when someone selects on the button
-
-})
+button.addEventListener("click", () => { // this for when someone selects on the button
+    recognition.start();
+});
