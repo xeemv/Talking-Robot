@@ -35,11 +35,25 @@ recognition.onresult = function (event) {
     - printed to the console was = "spoke words are I'm practicing today"
 */
 
+        //public VoiceInformation Voice { get; set; }
+        // using (SpeechSynthesizer synthesizer = new SpeechSynthesizer())
+        // {
+        //     VoiceInformation voiceInfo =
+        //         (
+        //             from voice in SpeechSynthesizer.AllVoices
+        //             where voice.Gender == VoiceGender.Female
+        //             select voice
+        //         ).FirstOrDefault() ?? SpeechSynthesizer.DefaultVoice;
 
+        //     synthesizer.Voice = voiceInfo;
+
+        //     // Windows.Media.SpeechSynthesis.SpeechSynthesisStream
+        //     stream = await synthesizer.SynthesizeTextToStreamAsync(text);
+        // }
 
 function computerSpeech(words){  // this is for the window/computer to talk back to the user
     const speech = new SpeechSynthesisUtterance();
-    speech.lang = "en-US" // the speech will use US English
+    speech.lang = "en-US"; // the speech will use US English
     speech.pitch = 0.9;
     speech.volume = 1;
     speech.rate = 1;
@@ -49,6 +63,14 @@ function computerSpeech(words){  // this is for the window/computer to talk back
 
     window.speechSynthesis.speak(speech);
 }
+
+// var utterance = new SpeechSynthesisUtterance('Hello Treehouse');
+// var voices = window.speechSynthesis.getVoices();
+
+// utterance.voice = voices.filter(function(voice) { return voice.name == 'Alex'; })[0];
+
+
+
 
 function determineWords(speech,words) { // preset what the responses will be when we ask a question
     if(words.includes("How are you")){
@@ -79,16 +101,17 @@ function determineWords(speech,words) { // preset what the responses will be whe
         speech.text = "Opening student login for you now!"
         window.open("https://learn.promineotech.com/login/index.php")
     }
+    if(words.includes("When will we go on a vacation?")){
+        speech.text = "In 2023, be patient and finish school."
+    }
+
     /*  
     - to add more prompts use these:
     //if(words.includes("How are you")){
     //     speech.text = "I'm fine, thank you!"
     // }if(words.includes("How are you")){
     //     speech.text = "I'm fine, thank you!"
-    // }if(words.includes("How are you")){
-    //     speech.text = "I'm fine, thank you!"
-    // }
-
+ 
     */
 }
 
