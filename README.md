@@ -119,7 +119,7 @@ Followed a YouTube tutorial created by KadirMedia. This tutorial is called "I cr
 - [KadirMedia](https://www.youtube.com/watch?v=9o2rSxHiv9w)
   
 Ballet Robo image credit to my mentor, Jolene Melanson.
-- [GitHub](https://github.com/JoleneMel)
+- [GitHub: JoleneMel](https://github.com/JoleneMel)
 - [Repository name: Health Bot App](https://github.com/JoleneMel/HealthBotApp)
 
 
