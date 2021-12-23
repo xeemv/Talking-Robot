@@ -50,11 +50,12 @@ Personal talking robot project to re-enforce JavaScript learning from bootcamp a
 To get a local copy up and running follow these simple example steps. -->
 
 Through this tutorial I learned about Application Programming Interface (API) and that not all browsers support this.
-<br>
+<p>
 Do take into account that FireFox does not support text-to-speech/webspeech API at this moment. If you would like to try this project, please consider using one of the four listed browsers per Mozilla.
+<p>
     - cited by: https://wiki.mozilla.org/Web_Speech_API_-_Speech_Recognition
         - "Chrome, Edge, Safari and Opera support a form of this API currently for Speech-to-text, which means sites that rely on it work in those browsers, but not in Firefox."
-<br>
+<p>
 We will need to use API for the speech recognition part with our talking robot.
 
 <!--
