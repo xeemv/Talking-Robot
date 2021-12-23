@@ -14,10 +14,26 @@ const recognition = new SpeechRecognition();
 recognition.onstart = function () {
     console.log("Speech Recognition started!");
 };
+/*  
+- in his example, he has it as "recognition.onstart"
+- onStart() = is called when the activity is becoming visible to the user.
+*/
+
 
 recognition.onresult = function (event) {
     console.log(event);
+    // line 27 was added after testing that speech recognition was captured
+
+    const spokenwords = event.results[0][0].transcript;
+    console.log("spoken words are",spokenwords);
 };
+/*  
+- in his example, he has it as "recognition.onresult"
+- line 27 and 28 will print out as "spoken words are..."
+    - my test recorded word were, "I'm practicing today"
+    - printed to the console was = "spoke words are I'm practicing today"
+*/
+
 
 button.addEventListener("click", () => { 
     recognition.start();
