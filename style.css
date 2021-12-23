@@ -12,7 +12,7 @@ body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .container {  /* container for img of robot and button box */
-    width: 80%;
+    width: 100%;
     height: 100vh;
     margin: auto;
     display: flex; /*this will make the container a flex box */
@@ -21,10 +21,24 @@ body{
     justify-content: center;  /*this will make the robot and text box center */
 }
 button{
-    padding: 10px;
-    width: 60%;
+    padding: 5px;
+    width: 25%;
     background-color: rgb(177, 177, 189);
     font-size: 22px;
     margin-top: 5%; /* this will create a space between the robot and the button */
     border-radius: 5px;
+}
+/* to fix the issue w/ from my test on line 120, will need to add a media query */
+@media(max-width:480px){
+    .calculator input{ /* made the input box smaller so the button box will be made a bit bigger. My adjustments are different from the tutorials based on my 50px images.  */
+      width: 70%;     
+    }
+    .calculator button{ /* My adjustments are different from the tutorials based on my 50px images.  */
+        width: 30%;     
+    }
+}
+@media(max-width:320px){
+    .calculator input{ /* made the input box smaller so the button box will be made a bit bigger. My adjustments are different from the tutorials based on my 50px images.  */
+      width: 40%;     
+    }
 }
