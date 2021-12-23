@@ -117,6 +117,9 @@ See the [open issues](https://github.com/github_username/repo_name/issues) for a
 
 Followed a YouTube tutorial created by KadirMedia. This tutorial is called "I created a talking BOT with Javascript || Javascript Project|HTML CSS JS Mini Project For Beginners", published on December 19th, 2021.
 - [KadirMedia](https://www.youtube.com/watch?v=9o2rSxHiv9w)
+<p>
+Ballet Robo image credit to my mentor, Jolene Melanson 
+- Her github account: (https://github.com/JoleneMel), repository: HealthBotApp (https://github.com/JoleneMel/HealthBotApp)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>

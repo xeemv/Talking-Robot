@@ -26,6 +26,7 @@ recognition.onresult = function (event) {
 
     const spokenwords = event.results[0][0].transcript;
     console.log("spoken words are",spokenwords);
+    computerSpeech(spokenwords); // this is the arguement for the function computerSpeech
 };
 /*  
 - in his example, he has it as "recognition.onresult"
@@ -34,6 +35,13 @@ recognition.onresult = function (event) {
     - printed to the console was = "spoke words are I'm practicing today"
 */
 
+
+function computerSpeech(words){
+    const speech = new SpeechSynthesisUtterance();
+    speech.lang = "en-US" // the speech will use US English
+    speech.pitch = 0.9;
+    speech.volume = 1;
+}
 
 button.addEventListener("click", () => { 
     recognition.start();
