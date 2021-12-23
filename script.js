@@ -36,12 +36,64 @@ recognition.onresult = function (event) {
 */
 
 
-function computerSpeech(words){
+
+function computerSpeech(words){  // this is for the window/computer to talk back to the user
     const speech = new SpeechSynthesisUtterance();
     speech.lang = "en-US" // the speech will use US English
     speech.pitch = 0.9;
     speech.volume = 1;
+    speech.rate = 1;
+    
+    //speech.text = words;
+    determineWords(speech,words); // function is created below
+
+    window.speechSynthesis.speak(speech);
 }
+
+function determineWords(speech,words) { // preset what the responses will be when we ask a question
+    if(words.includes("How are you")){
+        speech.text = "I'm fine, thank you!"
+    }
+    if(words.includes("Who am I")){
+        speech.text = "You are my friend"
+    }
+    if(words.includes("How is the weather")){
+        speech.text = "Why didn't you look outside or check the weather app?"
+    }
+    if(words.includes("Will you help me with my homework?")){
+        speech.text = "Sure, let's get started."
+    }
+    if(words.includes("Please open Facebook for me")){
+        speech.text = "Opening Facebook for you now!"
+        window.open("https://www.facebook.com/")
+    }
+    if(words.includes("Please open Google for me")){
+        speech.text = "Opening Google for you now!"
+        window.open("https://www.google.com/")
+    }
+    if(words.includes("Please open LinkedIn for me")){
+        speech.text = "Opening LinkedIn for you now!"
+        window.open("https://www.linkedin.com/")
+    }
+    if(words.includes("Please open student login for me")){
+        speech.text = "Opening student login for you now!"
+        window.open("https://learn.promineotech.com/login/index.php")
+    }
+    /*  
+    - to add more prompts use these:
+    //if(words.includes("How are you")){
+    //     speech.text = "I'm fine, thank you!"
+    // }if(words.includes("How are you")){
+    //     speech.text = "I'm fine, thank you!"
+    // }if(words.includes("How are you")){
+    //     speech.text = "I'm fine, thank you!"
+    // }
+
+    */
+}
+
+
+
 
 button.addEventListener("click", () => { 
     recognition.start();
