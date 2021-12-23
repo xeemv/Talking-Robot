@@ -22,7 +22,7 @@ body{
 }
 button{
     padding: 10px;
-    width: 30%;
+    width: 60%;
     background-color: rgb(177, 177, 189);
     font-size: 22px;
     margin-top: 5%; /* this will create a space between the robot and the button */
