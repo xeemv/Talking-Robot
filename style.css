@@ -34,15 +34,15 @@ button{
 - these codes below line 34 were taken from another project called tip calculator to help with any possible display issues depending on the width of the device viewing this.
 - to fix the issue w/ from my test on line 120, will need to add a media query */
 @media(max-width:480px){
-    .calculator input{ /* made the input box smaller so the button box will be made a bit bigger. My adjustments are different from the tutorials based on my 50px images.  */
+    .container input{ /* made the input box smaller so the button box will be made a bit bigger. My adjustments are different from the tutorials based on my 50px images.  */
       width: 70%;     
     }
-    .calculator button{ /* My adjustments are different from the tutorials based on my 50px images.  */
+    .container button{ /* My adjustments are different from the tutorials based on my 50px images.  */
         width: 30%;     
     }
 }
 @media(max-width:320px){
-    .calculator input{ /* made the input box smaller so the button box will be made a bit bigger. My adjustments are different from the tutorials based on my 50px images.  */
+    .container input{ /* made the input box smaller so the button box will be made a bit bigger. My adjustments are different from the tutorials based on my 50px images.  */
       width: 40%;     
     }
 }
